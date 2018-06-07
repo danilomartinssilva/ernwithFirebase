@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">376407195437-pgq524g8ngcnle2od2btpst725d5b1q9.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://expensesreactnative.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">376407195437</string>
+    <string name="google_api_key" translatable="false">AIzaSyDjZxRK4AErnRgEqd9o2ltvA47QIMMhn2U</string>
+    <string name="google_app_id" translatable="false">1:376407195437:android:440c2327a54787da</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDjZxRK4AErnRgEqd9o2ltvA47QIMMhn2U</string>
+    <string name="google_storage_bucket" translatable="false">expensesreactnative.appspot.com</string>
+    <string name="project_id" translatable="false">expensesreactnative</string>
+</resources>
