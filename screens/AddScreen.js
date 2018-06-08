@@ -68,7 +68,7 @@ export default class AddScreen extends Component{
             onChangeText = {(description) =>this.setState({description:description.toString()})}
             value = {this.state.description}
              />
-        
+                     
             <TextInput 
             placeholder="Valor: R$ 9,00"     
             keyboardType="numeric"   
