@@ -70,7 +70,7 @@ export default class AddScreen extends Component{
              />
 
             <TextInput 
-            placeholder="Valor: R$ 20,00"     
+            placeholder="Valor: R$ 30,00"     
             keyboardType="numeric"   
             underlineColorAndroid="transparent"   
             style = {styles.txField}
