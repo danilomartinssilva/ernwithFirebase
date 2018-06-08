@@ -49,7 +49,7 @@ const AppStack = createBottomTabNavigator ({
         tabBarVisible: true
         }
 });
-export default createSwitchNavigator ({
+export const Routes =  createSwitchNavigator ({
     AuthLoading: AuthLoadingScreen,
     App:AppStack,
     Auth:AuthStack
