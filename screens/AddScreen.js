@@ -10,8 +10,9 @@ import firebase from 'react-native-firebase';
 export default class AddScreen extends Component{
 
     constructor(props){
-        super(props);    
-
+        super(props);  
+        console.log("Teste");
+        
         this.doSave = this.doSave.bind(this);
         //this.dismiss = this.dismiss.bind(this);        
         this.reset = this.reset.bind(this);
