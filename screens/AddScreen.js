@@ -67,6 +67,7 @@ export default class AddScreen extends Component{
             style = {styles.txField}
             onChangeText = {(description) =>this.setState({description:description.toString()})}
             value = {this.state.description}
+            
              />
 
             <TextInput 
