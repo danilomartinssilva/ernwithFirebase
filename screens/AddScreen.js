@@ -95,8 +95,7 @@ export default class AddScreen extends Component{
            <Icon.Button onPress={this.doSave} name="ios-add" backgroundColor="#2E7D32">
                <Text style={{fontFamily: 'Arial', fontSize: 15,color:"#ffffff"}}>Salvar</Text>
            </Icon.Button>
-           </TouchableOpacity>
-        
+           </TouchableOpacity>                  
         
            </View>
             
