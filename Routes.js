@@ -3,7 +3,8 @@ import {createSwitchNavigator , createBottomTabNavigator,createStackNavigator } 
 import AddScreen from './screens/AddScreen';
 import ListScreen from './screens/ListScreen';
 import LoginScreen from './screens/LoginScreen';
-import DetailScreen from './screens/DetailScreen';
+
+import LogoutScreen from './screens/LogoutScreen'
 import Icon from 'react-native-vector-icons/dist/Ionicons';
 import AuthLoadingScreen from './AuthLoadingScreen';
 import React, {Component} from 'react';
@@ -13,15 +14,15 @@ const AuthStack = createStackNavigator ({
 });
 
 const AppStack = createBottomTabNavigator ({
-
-    Detail: {
-        screen: DetailScreen,
+    Sair: {
+        screen: LogoutScreen,
         navigationOptions: {
-            tabBarLabel: 'Detalhe',          
+            tabBarLabel: 'Sair',          
               
             tabBarIcon: (<Icon name="ios-exit" size={30} />)
         }
     },
+
     Add: {
         screen: AddScreen,
         navigationOptions: {
@@ -39,12 +40,13 @@ const AppStack = createBottomTabNavigator ({
 
 }, {
         initialRouteName: 'Add',
-        order: ['List', 'Add', 'Detail'],
+        order: ['List', 'Add', 'Sair'],
+        
         navigationOptions: {
         tabBarVisible: true
         }
 });
-export default createSwitchNavigator ({
+export  const Routes =  createSwitchNavigator ({
     AuthLoading: AuthLoadingScreen,
     App:AppStack,
     Auth:AuthStack

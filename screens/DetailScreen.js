@@ -4,6 +4,7 @@ import {createStackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/dist/Ionicons';
 import { configureAuthGoogle } from '../util/auth';
 import { GoogleSignin} from 'react-native-google-signin';
+import firebase from 'react-native-firebase';
 
 /*
 export default class DetailScreen extends Component{
@@ -19,15 +20,13 @@ export default class DetailScreen extends Component{
 */
 const DetailScreen = (props) => {
     let logout = () =>{
-        configureAuthGoogle().then(()=>{
-            GoogleSignin.signOut();
-            props.navigation.navigate('Login');
+      firebase.auth().signOut(function(){
+          this.props.navigation.navigate('Auth');
+      })
+    
+ }
 
-        })  .catch((err) => {
-            console.log('WRONG SIGNIN', err);
-        }).done();
-
-    }
+    
     return <View>{ logout()}</View>
 }
 
