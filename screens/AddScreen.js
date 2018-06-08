@@ -52,7 +52,6 @@ export default class AddScreen extends Component{
 
         this.reset();
 
-
         ToastAndroid.show('A pikachu appeared nearby !', ToastAndroid.CENTER);
         }
     render(){

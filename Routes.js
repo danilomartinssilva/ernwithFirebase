@@ -7,6 +7,8 @@ import DetailScreen from './screens/DetailScreen';
 import Icon from 'react-native-vector-icons/dist/Ionicons';
 import AuthLoadingScreen from './AuthLoadingScreen';
 import React, {Component} from 'react';
+import LogoutScreen from './screens/LogoutScreen';
+
 
 const AuthStack = createStackNavigator ({
     Login:LoginScreen
@@ -14,14 +16,16 @@ const AuthStack = createStackNavigator ({
 
 const AppStack = createBottomTabNavigator ({
 
-    Detail: {
-        screen: DetailScreen,
+    Sair: {
+        screen: LogoutScreen,
         navigationOptions: {
-            tabBarLabel: 'Detalhe',          
+            tabBarLabel: 'Sair',          
               
             tabBarIcon: (<Icon name="ios-exit" size={30} />)
         }
     },
+
+  
     Add: {
         screen: AddScreen,
         navigationOptions: {
@@ -39,7 +43,8 @@ const AppStack = createBottomTabNavigator ({
 
 }, {
         initialRouteName: 'Add',
-        order: ['List', 'Add', 'Detail'],
+        order: ['List', 'Add','Sair'],
+        
         navigationOptions: {
         tabBarVisible: true
         }

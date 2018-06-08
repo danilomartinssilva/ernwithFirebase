@@ -9,6 +9,7 @@ import {
 import { NavigationActions } from 'react-navigation';
 import { GoogleSigninButton,GoogleSignin} from 'react-native-google-signin';
 import { configureAuthGoogle } from './util/auth';
+import firebase from 'react-native-firebase';
 
 export default class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class AuthLoadingScreen extends React.Component {
   }  
   componentDidMount(){
   const  { navigate } = this.props.navigation;     
-    configureAuthGoogle().then(() => {   
+   /*  configureAuthGoogle().then(() => {   
           
           GoogleSignin.currentUserAsync().then((user) => {                       
 
@@ -29,7 +30,15 @@ export default class AuthLoadingScreen extends React.Component {
                   }       
         }).done();           
  
-        });
+        }); */
+        firebase.auth().onAuthStateChanged((user)=>{
+          if(user){
+            navigate('Add',{user:user});       
+          }
+          else{
+            navigate('Auth');
+          }
+        })
   }
 
 
