@@ -11,7 +11,8 @@ import LogoutScreen from './screens/LogoutScreen';
 
 
 const AuthStack = createStackNavigator ({
-    Login:LoginScreen
+    Login:LoginScreen,
+    
 });
 
 const AppStack = createBottomTabNavigator ({

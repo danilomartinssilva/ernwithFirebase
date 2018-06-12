@@ -1,11 +1,13 @@
 import { AppRegistry } from 'react-native';
+import Main from './Main';
 
 //import Dashboard from './Dashboard';
 
-import Routes from './Routes'
-import App from './App';
+/* import Routes from './Routes'
+import App from './App'; */
 console.disableYellowBox = true;
-AppRegistry.registerComponent('expenses', () => App);
+
+AppRegistry.registerComponent('expenses', () => Main);
 
 
 

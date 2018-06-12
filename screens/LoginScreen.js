@@ -10,7 +10,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class LoginScreen extends Component{
     static navigationOptions = {
-        title: 'Login',
+        header:null
       };
     
       state={
@@ -92,8 +92,8 @@ export default class LoginScreen extends Component{
 
                     <TouchableOpacity>                                            
                     <Icon.Button onPress={()=>this.doLogin()} name="logo-google" backgroundColor="#f44336">
-
-                         <Text style={{fontFamily: 'Arial', fontSize: 15,color:'#ffffff'}}>Login Google</Text>
+                                        
+                         <Text style={{fontFamily: 'Arial', fontSize: 15,color:'#ffffff'}}>Login Google.</Text>
 
                     </Icon.Button>
                     </TouchableOpacity>
